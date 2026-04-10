@@ -14,4 +14,5 @@ public interface IUniversiteService {
     Universite updateUniversite(Universite universite);
 
     List<Universite> getAllUniversites();
+    List<Universite> findByNomUniversiteStartingWithAndFoyer_NomFoyerContaining(String nomU, String nomF);
 }

@@ -44,5 +44,12 @@ public class UniversiteControllers {
         return universiteService.getUniversiteById(iduniversite);
     }
 
+    @GetMapping("/findByNomAndFoyer/{nomU}/{nomF}")
+    List<Universite> findByNomUniversiteStartingWithAndFoyer_NomFoyerContaining(
+            @PathVariable String nomU,
+            @PathVariable String nomF) {
+        return universiteService.findByNomUniversiteStartingWithAndFoyer_NomFoyerContaining(nomU, nomF);
+    }
+
 
 }

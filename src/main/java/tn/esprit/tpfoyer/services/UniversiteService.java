@@ -36,4 +36,8 @@ public class UniversiteService implements IUniversiteService {
     public List<Universite> getAllUniversites() {
         return universiteRepository.findAll();
     }
+    @Override
+    public List<Universite> findByNomUniversiteStartingWithAndFoyer_NomFoyerContaining(String nomU, String nomF) {
+        return universiteRepository.findByNomUniversiteStartingWithAndFoyer_NomFoyerContaining(nomU, nomF);
+    }
 }
